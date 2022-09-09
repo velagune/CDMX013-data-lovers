@@ -6,7 +6,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+
+<div class="root">
+
+  <div id="sidebar">
+     <ul>
+        <li>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Studio_Ghibli_portal_logo.png" class="logo" alt="">
+        </li>
+<div class="prueba">
+        <h3 class="filterby">FILTRAR POR</h3>
+
+        <div class="select"><br>
+          <select class="select" id="fechas">
+            <option selected disabled>FECHA DE ESTRENO</option>
+          </select> <br> <!--NO USAR BR, BUSCAR CÓMO REEMPLAZARLO DESDE CSS-->
+
+          <select class="select" id="directores">
+            <option selected disabled>DIRECTORES</option>
+          </select><br>
+          <h3 class="filterby">ORDENAR POR</h3><br>
+
+          <select class="select" id="ordenado">
+            <option selected disabled>ALFABÉTICAMENTE</option>
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+          </select>
+        </div> 
+      </div>
+     </ul>
+  </div>
+
+  <div id="results">
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
     <script src="main.js" type="module"></script>
   </body>
 </html>

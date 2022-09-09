@@ -1,9 +1,10 @@
-// estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
+export function filterByDirector(nameDirector, movies){
+  const directoresFiltro = movies.filter(oneMovie => oneMovie.director == nameDirector)
+  return directoresFiltro
+}
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export function filterByYear(movieYear, yearArray){
+  const fechasFiltro = yearArray.filter(oneMovie => oneMovie.release_date == movieYear)
+  return fechasFiltro
+}

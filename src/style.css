@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fd39b0c9-fc35-4a4e-96c7-e4639e0887d7/ddul5lc-a58bce6f-56c1-469d-b5aa-a3b22efa95aa.jpg/v1/fill/w_1187,h_673,q_70,strp/background_study___spirited_away_by_martulen_ddul5lc-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjgxIiwicGF0aCI6IlwvZlwvZmQzOWIwYzktZmMzNS00YTRlLTk2YzctZTQ2MzllMDg4N2Q3XC9kZHVsNWxjLWE1OGJjZTZmLTU2YzEtNDY5ZC1iNWFhLWEzYjIyZWZhOTVhYS5qcGciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xUPup4V4jI-QRrh0NRnz9Tl-dRngFaN19Yp8fbzy47I");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 20em;
+  font-family: 'Inria Sans', sans-serif;
+}
+
+
+#sidebar {
+    position: fixed;
+    width: 330px;
+    height: 100%;
+    background: #ae98a5d1;
+    text-align: center;
+    padding: 15px 15px;
+    text-align: center;
+    top: 0px;
+    font-size: 12px;
+
+}
+
+.prueba {
+    justify-content: center;
+    margin-top: 170px;
+}
+
+.filterby{
+    text-align: center;
+    color: white;
+    font-size: 20;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+
+
+
+#results {
+    background-color: rgba(255, 255, 255, 0.215);
+    display: flex;
+    margin: left;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 410px;
+    margin-top: 20px;
+    margin-right: 40px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 26px;
+    width: 200px;
+}    .select select {
+        font-family: 'Inria Sans', sans-serif;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 6px 8px;
+        outline: 0;
+        border: 1px solid 58556A;
+        border-radius: 5px;
+        background: #f1f1f1;
+        color: #595468;
+    }
+
+
+
+
+
+.oneMovie {
+    margin: 20px;
+    font-size: 9px;
+    text-align: center;
+    color: #49697A;
+    background-color: rgba(255, 255, 255, 0.955);
+    padding: 12px;
+    border-radius: 5px;
+    height: 213px;
+    width: 140px;
+    padding-top: 20px;
+}
+
+.poster {
+    border: 1px solid #8C8C8C;
+    border-radius: 5px;
+    height: 180px;
+}
+
+.title{
+    padding: 1px;
+    text-transform: uppercase;
+}

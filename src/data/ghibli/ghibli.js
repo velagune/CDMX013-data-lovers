@@ -1865,7 +1865,7 @@ export default {
       "description": "14-year-old Arrietty and the rest of the Clock family live in peaceful anonymity as they make their own home from items 'borrowed' from the house's human inhabitants. However, life changes for the Clocks when a human boy discovers Arrietty.",
       "director": "Hiromasa Yonebayashi",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/4/46/The_Borrower_Arrietty.jpg",
+      "poster": "https://i.pinimg.com/736x/5c/39/63/5c3963bd908539e59d55c90224fed31c--cool-gifts-dream-come-true.jpg",
       "release_date": "2010",
       "rt_score": "95",
       "people": [

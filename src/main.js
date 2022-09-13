@@ -53,6 +53,7 @@ document.getElementById('ordenado').addEventListener('change', function(evento){
         })
     }
     showMovies(moviesCopy)
+    console.log(moviesCopy)
 })
 
 
@@ -75,14 +76,18 @@ fechas.forEach(fecha => {
 const selectElement2 = document.getElementById('fechas')
 
 selectElement2.addEventListener('change', function(evento){
-    showMovies(filterByYear(evento.target.value))
-    filterByYear(evento.target.value, movies)
+    showMovies(filterByYear(evento.target.value, movies))
 })
 
 
 //------------------------------------------------------DIRECTORES
 const directores = []
+const directoresDuplicados = []
+
 movies.forEach(oneMovie => {
+
+    directoresDuplicados.push(oneMovie.director)
+
     if (!directores.includes(oneMovie.director))
     directores.push(oneMovie.director)   //filtrado
 })
@@ -93,6 +98,7 @@ directores.forEach(director => {
     option.value = director
     option.textContent = director
     directoresSelector.appendChild(option)
+    console.log(director, count(directoresDuplicados, director))
 })
 
 const selectElement = document.getElementById('directores')
@@ -100,3 +106,11 @@ const selectElement = document.getElementById('directores')
 selectElement.addEventListener('change', function(event){
     showMovies(filterByDirector(event.target.value, movies))
 })
+
+//------------------------------------------------------
+
+//si utilizo función de forma convencional (no flecha) no importa si la ejecuto antes de llamarla, igual se va a ejecutar antes
+function count(array, item){
+    return array.filter((currentItem) => currentItem == item).length;
+}
+

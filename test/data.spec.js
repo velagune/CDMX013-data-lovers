@@ -9,32 +9,36 @@ describe('filterByDirector', () => {
     const moviesArray = [{director: 'aline'}, {director: 'aline'}, {director: 'daniel'}, {director: 'carlos'}]
     const nameDirector = 'aline'
     const resultado = [{director: 'aline'}, {director: 'aline'}]
-    expect(filterByDirector(nameDirector, moviesArray)).toEqual(resultado);
+    expect(filterByDirector(nameDirector, moviesArray)).toEqual(resultado); //matcher
   });
 });
 
-describe('filterByYear', () => {
+
+
+describe('filterByrelease_date', () => {
  
   it('filtrado por fecha`', () => {
-    const yearArray = [{year: '1990'}, {year: '1990'}, {year: '1992'}, {year: '1993'}]
-    const movieYear = '1990'
-    const year = [{year: 1990}, {year: 1990}]
-    expect(filterByYear(movieYear, yearArray)).toEqual(year);
+    const release_dateArray = [{release_date: '1990'}, {release_date: '1990'}, {release_date: '1992'}, {release_date: '1993'}]
+    const movierelease_date = '1990'
+    const resultado = [{release_date: '1990'}, {release_date: '1990'}]
+    expect(filterByYear(movierelease_date, release_dateArray)).toEqual(resultado);
+  });
+});
+
+
+
+describe('sortOrder', () => {
+ 
+  it('Ordenado`', () => {
+    const sortArray = [{title: 'castle in the sky'}, {title: 'my neighbor totoro'}, {title: 'whisper of the heart'}]
+    const resultado = [{title: 'castle in the sky'}, {title: 'my neighbor totoro'}, {title: 'whisper of the heart'}]
+    expect(filterByDirector(nameDirector, moviesArray)).toEqual(resultado); //matcher
   });
 });
 
 
 
 
-// describe('filterByYear', () => {
-
-//   it.only('filtrado por fecha`', () => {
-//       const extasis = filterByYear(data.films, '1999', '1997')
-
-//       expect(extasis.length).toBe(2)
-
-//   })
-// })
 
 
 

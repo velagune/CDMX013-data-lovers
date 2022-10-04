@@ -1,14 +1,13 @@
 
-import { filterByDirector, filterByYear } from './data.js'
+import { filterByDirector, filterByYear, orderBy } from './data.js'
 import allData from './data/ghibli/ghibli.js'
 const results = document.getElementById("results")
-
 
 
 //------------------------------------------------------PELICULAS
 const movies = allData.films
 
-const generadorHTML=(movie)=>{
+const generadorHTML=(movie)=>{ //arrow function
     const div = document.createElement('div')
     div.classList = 'oneMovie'
 
@@ -24,7 +23,7 @@ const generadorHTML=(movie)=>{
     return div
 }
 
-function showMovies(movies){
+function showMovies(movies){ //function declaration
     results.innerHTML = ''
     movies.forEach(oneMovie => results.appendChild(generadorHTML(oneMovie)))
 }
@@ -34,26 +33,11 @@ showMovies(movies)
 
 //------------------------------------------------------ ORDENA
 document.getElementById('ordenado').addEventListener('change', function(evento){
-    const moviesCopy = [...movies] //forma de sacar una copia del arreglo movies
-    if (evento.target.value === 'a-z'){
-    moviesCopy.sort((a, b) => {
-        if (a.title < b.title){
-            return -1
-        } else {
-            return 1
-        }
-    })
-    } else if (evento.target.value === 'z-a'){
-        moviesCopy.sort((a,b) => {
-            if (a.title > b.title){
-                return -1
-            } else {
-                return 1
-            }
-        })
-    }
-    showMovies(moviesCopy)
-    console.log(moviesCopy)
+    const captura = evento.target.value
+    //orderBy(captura, movies)
+    const resultadoOrder =     orderBy(captura, movies)
+    showMovies(resultadoOrder)
+
 })
 
 
@@ -111,6 +95,9 @@ selectElement.addEventListener('change', function(event){
 
 //si utilizo función de forma convencional (no flecha) no importa si la ejecuto antes de llamarla, igual se va a ejecutar antes
 function count(array, item){
-    return array.filter((currentItem) => currentItem == item).length;
+    const monica = array.filter((currentItem) => currentItem == item).length;
+    const totalMovies = movies.length
+    const paola = ((monica*100) / totalMovies).toFixed(2)
+    return paola 
 }
 

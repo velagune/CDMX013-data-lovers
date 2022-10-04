@@ -11,5 +11,26 @@ export function filterByYear(movieYear, dataMovies){
   return fechasFiltro
 }
 
+export function orderBy(captura, moviesToOrder){
+  const moviesCopy = [...moviesToOrder] //forma de sacar una copia del arreglo movies
+  if (captura === 'a-z'){
+  moviesCopy.sort((a, b) => {
+      if (a.title < b.title){
+          return -1
+      } else {
+          return 1
+      }
+  })
+  } else if (captura === 'z-a'){
+      moviesCopy.sort((a,b) => {
+          if (a.title > b.title){
+              return -1
+          } else {
+              return 1
+          }
+      })
+  }
+  return moviesCopy
+}
 
 

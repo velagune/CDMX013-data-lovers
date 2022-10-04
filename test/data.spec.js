@@ -1,4 +1,4 @@
-import {filterByDirector, filterByYear} from '../src/data.js'
+import {filterByDirector, filterByYear, orderBy} from '../src/data.js'
 //import data from "../src/data/ghibli/ghibli.js"
 
 
@@ -14,7 +14,6 @@ describe('filterByDirector', () => {
 });
 
 
-
 describe('filterByrelease_date', () => {
  
   it('filtrado por fecha`', () => {
@@ -27,12 +26,13 @@ describe('filterByrelease_date', () => {
 
 
 
-describe('sortOrder', () => {
+describe('orderBy', () => {
  
   it('Ordenado`', () => {
-    const sortArray = [{title: 'castle in the sky'}, {title: 'my neighbor totoro'}, {title: 'whisper of the heart'}]
+    const moviesToOrder = [{title: 'castle in the sky'}, {title: 'my neighbor totoro'}, {title: 'whisper of the heart'}]
     const resultado = [{title: 'castle in the sky'}, {title: 'my neighbor totoro'}, {title: 'whisper of the heart'}]
-    expect(filterByDirector(nameDirector, moviesArray)).toEqual(resultado); //matcher
+    const captura = 'a-z'
+    expect(orderBy(captura, moviesToOrder)).toEqual(resultado); //matcher
   });
 });
 
@@ -47,6 +47,7 @@ describe('sortOrder', () => {
 
 
 
+/*
 describe('anotherExample', () => {
   const miNombre = "Aline"
   it('is a string', () => {
@@ -57,3 +58,4 @@ describe('anotherExample', () => {
     expect(miNombre).toBe('Aline');
   });
 });
+*/
